@@ -1,31 +1,31 @@
 <?php include "./header.php";?>
 
 <div class="destaque-cursos d-flex justify-content-center text-center flex-wrap m-4">
-    <div class="cartao cartao-ads d-flex justify-content align-items-center rounded-3">
-        <div class="mx-auto">
-            <div class="icone-curso">
-                <img src="/img/iconeAgro.svg" alt="consultar">
-            </div>
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Consultar Requerimento</button>
-        </div>
-    </div>
     <div class="cartao cartao-ads d-flex align-items-center rounded-3">
-        <div class="mx-auto">
+        <div class="mx-auto opacity-100">
             <div class="icone-curso">
-                <img src="/img/iconePI.svg" alt="PI">
+                <img src="./imagens/add.png" alt="newReq">
             </div>
             <a href="./formulario.php">
-                <button class="btn btn-danger">Novo Requerimento</button>
+                <button class="btn btn-primary">Novo Requerimento</button>
             </a>
         </div> 
     </div>
-    <div class="cartao cartao-ads d-flex align-items-center rounded-3">
-        <div class="mx-auto">
+    <div class="cartao cartao-ads d-flex justify-content align-items-center rounded-3">
+        <div class="mx-auto opacity-100">
             <div class="icone-curso">
-                <img src="/img/iconePI.svg" alt="PI">
+                <img src="./imagens/search.png" alt="search">
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Consultar Requerimento</button>
+        </div>
+    </div>
+    <div class="cartao cartao-ads d-flex align-items-center rounded-3">
+        <div class="mx-auto opacity-100">
+            <div class="icone-curso">
+                <img src="./imagens/adm.png" alt="adm">
             </div>
             <a href="./login.php">
-                <button class="btn btn-danger">Secretaria</button>
+                <button class="btn btn-primary">Acesso Administrativo</button>
             </a>
         </div>
     </div>

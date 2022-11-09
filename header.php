@@ -11,7 +11,7 @@
 
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.fatectq.edu.br/css/site.css">
+    <link rel="stylesheet" href="./css/index.css">
 
     <!-- Scripts -->
     <script src="https://www.fatectq.edu.br/js/site.js" defer=""></script>
