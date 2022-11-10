@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="curso" name="curso" onchange="onSelectCurso()">
+        <option value = "PI">Producao </option>
+        <option value ="ADS"> ADS </option>
+        <option value ="AGRO"> AGRO </option>
+        <option value ="GE"> GESTAO </option>
+        <option value ="SI"> SI </option>
+    </select>
+    <select id="turno" name="turno">
+        <option value = "M">Manha</option>
+        <option value ="N">Noite</option>
+    </select>
+    <script>
+        function onSelectCurso( props){
+            
+            const selectElement = document.getElementById('curso');
+            const turnoElement = document.getElementById('turno');
+            //console.log(selectElement);
+
+            let valor = selectElement.value;
+            console.log(valor) ;
+            if ( valor==="PI" ) {
+                console.log("producao") ; 
+                turnoElement.innerHTML = "<option value = 'M'>Manhâ</option> <option value = 'N'>Noite</option>" ;
+            }
+            if ( valor==="ADS" ) {
+                console.log("ads") ;
+                turnoElement.innerHTML = "<option value = 'N'>Noite</option> <option value = 'T'>Tarde</option>" ;
+            }   
+            if ( valor==="AGRO" ) {
+                console.log("Agro") ;
+                turnoElement.innerHTML = "<option value = 'N'>Noite</option> <option value = 'T'>Tarde</option>" ;
+            }   
+            if ( valor==="SI" ) {
+                console.log("SI") ;
+                turnoElement.innerHTML = "<option value = 'M'>Manhã</option>" ;
+            }  
+            if ( valor==="GE" ) {
+                console.log("Gestão") ;
+                turnoElement.innerHTML = "<option value = 'E'>Ead</option>" ;
+            }   
+
+        }
+    </script>    
+</body>
+</html>
