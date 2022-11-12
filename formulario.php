@@ -29,7 +29,7 @@
                     </select>
                     <select id="turno" name="turno" required class="form-control form-select">
                         <option value = "0">Selecione o seu Turno</option>
-                        <option value = "M">Manhâ</option>
+                        <option value = "M">Manhã</option>
                         <option value = "T">Tarde</option>
                         <option value = "N">Noite</option>
                     </select>
