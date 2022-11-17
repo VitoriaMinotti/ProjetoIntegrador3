@@ -1,9 +1,11 @@
-<?php include "./header.php";?>
+<?php 
+$titulo = "Escolha o Tipo de Requerimento";
+include "./header.php";?>
 
 <form action="./formulario3.php" method="post" >
 
 <div class="col-6 container-fluid">
-    <br><h1 class="h3 text-center">Selecione o Requerimento que deseja solicitar:</h1><br>
+    <br><h1 class="h3 text-center">SELECIONE O REQUERIMENTO QUE DESEJA SOLICITAR</h1><br>
 </div>
     <div class="col-md-10 container border rounded">
         <div class="row m-1">
@@ -36,7 +38,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R1 - ABONO DE FALTAS</p>
+                        <p class="p-2 h4">01 - ABONO DE FALTAS</p>
                         <p>O aluno poderá solicitar em caso de Serviço Militar ou por óbito de parente de 1º Grau</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -45,7 +47,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R1 - ABONO DE FALTAS" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="01 - ABONO DE FALTAS" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>  
                     </div>
                 </div>
@@ -53,7 +55,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R2 - ALTERAÇÃO NA GRADE HORÁRIA</p>
+                        <p class="p-2 h4">02 - ALTERAÇÃO NA GRADE HORÁRIA</p>
                         <p>O aluno poderá solicitar troca de disciplina após confirmação da rematrícula on-line</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -61,7 +63,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R2 - ALTERAÇÃO NA GRADE HORÁRIA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="02 - ALTERAÇÃO NA GRADE HORÁRIA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +71,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R3 - MATRICULA DE ALUNO ESPECIAL</p>
+                        <p class="p-2 h4">03 - MATRICULA DE ALUNO ESPECIAL</p>
                         <p>Para quem deseja frequentar aula equivalente de sua faculdade de origem na FATEC</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -78,7 +80,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R3 - MATRICULA DE ALUNO ESPECIAL" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="03 - MATRICULA DE ALUNO ESPECIAL" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -86,7 +88,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R4 - APROVEITAMENTO DE ESTUDOS</p>
+                        <p class="p-2 h4">04 - APROVEITAMENTO DE ESTUDOS</p>
                         <p>O aluno poderá solicitar dispensa em disciplina que já foi aprovado em outra graduação</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -95,7 +97,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R4 - APROVEITAMENTO DE ESTUDOS" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="04 - APROVEITAMENTO DE ESTUDOS" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +105,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R5 - BENEFÍCIOS DECRETO-LEI 1.044/69</p>
+                        <p class="p-2 h4">05 - BENEFÍCIOS DECRETO-LEI 1.044/69</p>
                         <p>O aluno poderá solicitar Regime de Exercícios Domiciliares, realizar trabalhos para abono de faltas. Apenas atestado acima de 15 dias</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -111,7 +113,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R5 - BENEFÍCIOS DECRETO-LEI 1.044/69" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="05 - BENEFÍCIOS DECRETO-LEI 1.044/69" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -119,7 +121,7 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R6 - BENEFÍCIOS DECRETO-LEI 6.202/759</p>
+                        <p class="p-2 h4">06 - BENEFÍCIOS DECRETO-LEI 6.202/759</p>
                         <p>A aluna, enquanto gestante, poderá solicitar Regime de Exercícios Domiciliares, realizar trabalhos para abono de faltas. Apenas atestado acima de 15 dias</p>
                         <br>
                         <p class="h5">Anexo Obrigatório</p>
@@ -127,7 +129,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R6 - BENEFÍCIOS DECRETO-LEI 6.202/759" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="06 - BENEFÍCIOS DECRETO-LEI 6.202/759" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -135,14 +137,14 @@
             <div class="col-md-4 mt-3 bg-light border rounded d-flex">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-2">
-                        <p class="p-2 h4">R7 - CANCELAMENTO DE MATRICULA</p>
+                        <p class="p-2 h4">07 - CANCELAMENTO DE MATRICULA</p>
                         <p>O aluno poderá solicitar o cancelamento da matricula, implicando na desistência da vaga.</p>
                         <br>
                         <p class="h5">Sem Anexo Obrigatório</p>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="R7 - CANCELAMENTO DE MATRICULA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="07 - CANCELAMENTO DE MATRICULA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +159,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="08 - DESISTÊNCIA DE DISCIPLINA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +175,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="09 - APRESSAMENTO DE DIPLOMA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -189,7 +191,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="10 - EXAME DE PROFICIÊNCIA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -205,7 +207,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="11 - INSCRIÇÃO PARA VAGAS REMANESCENTES" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -222,7 +224,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="12 - MATRÍCULA EM DISCIPLINA DE OUTRO TURNO OU CURSO" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -238,7 +240,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="13 - SEGUNDA CHAMADA DE PROVA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -254,7 +256,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="14 - TRANCAMENTO TOTAL DE MATRICULA" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -271,7 +273,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="15 - EQUIVALÊNCIA PARA O TRABALHO DE GRADUAÇÃO- TG" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -286,7 +288,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" disabled class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="16 - REVISÃO DE NOTAS E FALTAS" disabled class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -301,7 +303,7 @@
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" name="17 - OUTROS TIPOS DE SOLICITAÇÃO" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
