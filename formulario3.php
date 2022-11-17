@@ -25,14 +25,18 @@
         <div class="row">
             <div class="col-md-12  bg-light border rounded">
                 <div class="d-flex flex-column justify-content-between">
-                    <div class="row m-2">
+                    <div class="row m-3">
                         <label class="m-2 h4">Descrição:</label>
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Descreva o motivo da sua solicitação." id="floatingTextarea2" style="height: 200px"></textarea>
+                            <textarea class="form-control" required placeholder="Descreva o motivo da sua solicitação." id="floatingTextarea2" style="height: 200px"></textarea>
                             <label class="m-1" for="floatingTextarea2">Descreva o motivo da sua solicitação.</label>
                         </div>
                         <label class="h5 mt-3">ANEXO OBRIGATÓRIO</label>
                         <input type="file" name="anexo[]" required multiple class="form-control">
+                    </div>
+                    <div class="row m-3 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">NECESSITA DE VIA IMPRESSA</label>
                     </div>
                    
                     <div class="row m-2">   
