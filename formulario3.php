@@ -3,15 +3,16 @@
     include "./header.php";
     if (isset($_FILES["anexo"]) && !empty($_FILES["anexo"]))
     {
-        echo "<pre>";
-        print_r($_FILES);
-        echo "</pre>";
         for($i = 0; $i < count($_FILES["anexo"]["name"]); $i++)
         {
             move_uploaded_file($_FILES["anexo"]["tmp_name"][$i], "./anexo/".$_FILES["anexo"]["name"][$i]);
             //Salvar o file[$i] no banco com o Id da requisição
         }
-        echo "Anexo enviado com sucesso";
+        ?>
+        <div class="alert alert-success">
+            Anexo enviado com sucesso
+        </div>
+        <?php
     } 
 
     ?>
@@ -38,17 +39,19 @@
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">NECESSITA DE VIA IMPRESSA</label>
                     </div>
-                   
                     <div class="row m-2">   
-                        <div class="col-6 offset-4">
-                            <button type="submit" name="descricao" class="btn btn-success rounded m-2">Enviar Anexo</button>
+                        <div class="col-6 offset-7">
+                            <button type="submit" name="descricao" class="btn btn-primary rounded m-2">ENVIAR ANEXO</button>
                         </div>  
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </form>
+
+
+
+
 
 <?php include "./footer.php";?>
