@@ -81,7 +81,7 @@
                     <a class="dropdown-item" target="_blank" href="http://mail.fatec.sp.gov.br/">E-mail (fatec.sp.gov.br)</a>
                     <a class="dropdown-item" target="_blank" href="http://revista.fatectq.edu.br/">Revista Interface Tecnológica</a>
                     <a class="dropdown-item" target="_blank" href="http://simtec.fatectq.edu.br/">Simpósio de Tecnologia (SIMTEC)</a>
-                    <a class="dropdown-item" target="_blank" href="index.php">Requerimentos</a>   
+                    <a class="dropdown-item" target="_blank" href="index.php">Requerimento On-line</a>   
                 </div>
             </li>     
             <li class="nav-item dropdown">
