@@ -1,4 +1,7 @@
-<?php include "./header.php";?>
+<?php 
+
+$titulo = "Informações do Aluno";
+include "./header.php";?>
 
 <form action="./formulario2.php" method="post" >
 
