@@ -1,3 +1,43 @@
+<?php 
+include "./db/conexao.php";
+
+if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha']))
+{
+    $email = $conexao->real_escape_string($_POST['email']);
+    $senha = $conexao->real_escape_string($_POST['senha']);
+
+    $query = "select * from administrativo where email = '$email' and senha = '$senha'";
+    $resultado = mysqli_query($conexao,$query);
+    
+    $qtd = $resultado->num_rows;
+
+    if ($qtd == 1) {
+
+        $usuario = $resultado->fetch_assoc();
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        $_SESSION['id_administrativo'] = $usuario['id_administrativo'];
+        $_SESSION['setor'] = $usuario['setor'];
+
+        header("location:adm.php");
+
+    }else{
+        ?>
+            <script>
+                alert("Login Incorreto!");
+            </script>
+        <?php
+    }
+    
+}
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+?>
 <html lang="pt-BR">
     <head>
     <meta charset="utf-8">
@@ -8,7 +48,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap">
-
+    <link rel="icon" type="imagem/png" href="./img/logoFatec.svg" />
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">

@@ -1,7 +1,8 @@
 <?php 
 
 $titulo = "Formulario Final";
-include "./header.php";?>
+include "./header.php";
+include "./db/conexao.php";?>
 
 
 
