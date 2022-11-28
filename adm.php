@@ -1,13 +1,12 @@
 <?php 
     $titulo = "login";
-    include "./header.php";
+    include "protect.php";
     include "./db/conexao.php";
-    //include "protect.php";
-
+    include "./header.php";
     // if (isset($_GET["busca"])&& !empty($_GET["busca"])) {
     //     $protocolo = $_GET["busca"];
-    //     $conexao = file_get_contents("select * from solicitacao where protocolo = $protocolo");
-    //     $conexao = json_decode($conexao,true);
+    //     $query = file_get_contents("select * from solicitacao where protocolo = $protocolo");
+    //     $conexao = json_decode($query,true);
     
     // }else{
     //     $conexao = file_get_contents("select * from solicitacao");
@@ -18,7 +17,7 @@
 
 <div class="col-md-10 my-4 container border rounded">
     <div class="card mt-4 mb-4">
-        <div class="d-flex card-header bg-success text-white justify-content-between">
+        <div class="d-flex card-header bg-success text-white align-items-center justify-content-between">
             REQUERIMENTOS
             <div class="bg-success text-white text-end">
                 <div class="btn-group" role="group">
@@ -67,8 +66,8 @@
                 </thead>
                 <tbody>
                 <?php 
-                    $query2 = "select p.protocolo protocolo, p.situacao situacao, p.requerimento requerimento, p.data_entrada data_entrada, a.nome nome, a.email email, a.telefone telefone from solicitacao p inner join aluno a on (a.id_aluno = p.id_solicitacao)";
-                    $dados = mysqli_query($conexao,$query2);
+                    $query = "select p.protocolo protocolo, p.id_solicitacao id_solicitacao, p.situacao situacao, p.requerimento requerimento, p.data_entrada data_entrada, a.nome nome, a.email email, a.telefone telefone from solicitacao p inner join aluno a on (p.id_solicitacao = a.id_aluno)";
+                    $dados = mysqli_query($conexao,$query);
 
                     if($dados)
                     {
@@ -82,17 +81,14 @@
                                     <td><?php echo $linha["situacao"];?></td>
                                     <td><?php echo $linha["requerimento"];?></td>
                                     <td><?php echo $linha["data_entrada"];?></td>
-                                    <td><a class="btn btn-warning" href="./completo.php?id=<?php echo $linha["protocolo"];?>">VISUALIZAR</a> </td>
+                                    <td><a class="btn btn-warning" href="./completo.php">VISUALIZAR</a></td>
                                 </tr>
 
                         <?php
                         }
                     }
 
-                    for($i = 0; $i< 10; $i++)
-                    {
                         
-                    }
                 ?>
                 </tbody>
             </table>

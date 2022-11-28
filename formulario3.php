@@ -1,7 +1,15 @@
 <?php 
     $titulo = "Descrição e Anexo";
-    include "./header.php";
     include "./db/conexao.php";
+
+    if (isset($_POST["req"]) && !empty($_POST["req"]) ) {
+    
+    }else{
+        header("location:index.php");
+    }
+    
+    include "./header.php";
+    
 
     
 ?>

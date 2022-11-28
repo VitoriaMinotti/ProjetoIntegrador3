@@ -1,8 +1,16 @@
 <?php 
 
     $titulo = "Formulario Final";
-    include "./header.php";
     include "./db/conexao.php";
+
+    if (isset($_POST["descricao"]) && !empty($_POST["descricao"]) ) {
+    
+    }else{
+        header("location:index.php");
+    }
+    
+    include "./header.php";
+    
 
 
     ?>

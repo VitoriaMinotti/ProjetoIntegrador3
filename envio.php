@@ -1,8 +1,16 @@
 <?php 
 
     $titulo = "Envio";
-    include "./header.php";
     include "./db/conexao.php";
+
+    if (isset($_POST["nome"]) && !empty($_POST["nome"]) ) {
+    
+    }else{
+        header("location:index.php");
+    }
+    
+    include "./header.php";
+    
 
     if (isset($_FILES["anexo"]) && !empty($_FILES["anexo"]))
     {
@@ -37,19 +45,16 @@
         $adm = 1;
         $protocolo = $ra . date("d") . date("m");
         echo $protocolo;    
-        $anexo = 1;
+        $anexo = $_FILES[$i];
+        $situacao = "ANDAMENTO";
         $query = "insert into aluno (nome, ra, curso, turno, email, telefone) values('$nome','$ra','$curso','$turno','$email','$telefone')";
         $resultado = mysqli_query($conexao,$query);
         $ultimoId = mysqli_insert_id($conexao);
-        $query2 = "insert into solicitacao (id_aluno, id_administrativo, id_anexo, protocolo, requerimento, descricao, data_entrada) values ($ultimoId, '$adm', '$anexo', '$protocolo', '$req','$descricao','$data')";
+        $query2 = "insert into solicitacao (id_aluno, id_administrativo, id_anexo, protocolo, situacao, requerimento, descricao, data_entrada) values ($ultimoId, '$adm', '$anexo', '$protocolo', '$situacao', '$req','$descricao','$data')";
         $resultado2 = mysqli_query($conexao,$query2);
     
     }else{
-        ?>
-            <script>
-                alert("Ocorreu um erro ao enviar sua solicitação!");
-            </script>
-        <?php
+        echo "Ocorreu um erro ao enviar sua solicitação!";
     }
 
     ?>

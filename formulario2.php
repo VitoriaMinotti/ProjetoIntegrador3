@@ -1,8 +1,15 @@
 <?php 
 $titulo = "Escolha o Tipo de Requerimento";
-include "./header.php";
+
 include "./db/conexao.php";
 
+if (isset($_POST["nome"]) && !empty($_POST["nome"]) ) {
+    
+}else{
+    header("location:index.php");
+}
+
+include "./header.php";
 
 ?>
 
