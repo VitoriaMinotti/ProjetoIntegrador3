@@ -1,8 +1,26 @@
 <?php 
 $titulo = "Escolha o Tipo de Requerimento";
-include "./header.php";?>
+
+include "./db/conexao.php";
+
+if (isset($_POST["nome"]) && !empty($_POST["nome"]) ) {
+    
+}else{
+    header("location:index.php");
+}
+
+include "./header.php";
+
+?>
 
 <form action="./formulario3.php" method="post" >
+
+<input type="hidden" name="nome" value="<?php echo $_POST["nome"];?>">
+<input type="hidden" name="ra" value="<?php echo $_POST["ra"];?>">
+<input type="hidden" name="curso" value="<?php echo $_POST["curso"];?>">
+<input type="hidden" name="turno" value="<?php echo $_POST["turno"];?>">
+<input type="hidden" name="email" value="<?php echo $_POST["email"];?>">
+<input type="hidden" name="telefone" value="<?php echo $_POST["telefone"];?>">
 
 <div class="col-6 container-fluid">
     <br><h1 class="h3 text-center">SELECIONE O REQUERIMENTO QUE DESEJA SOLICITAR</h1><br>
@@ -47,7 +65,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="01 - ABONO DE FALTAS" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="01 - ABONO DE FALTAS" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>  
                     </div>
                 </div>
@@ -63,7 +81,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="02 - ALTERAÇÃO NA GRADE HORÁRIA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="02 - ALTERAÇÃO NA GRADE HORÁRIA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -80,7 +98,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="03 - MATRICULA DE ALUNO ESPECIAL" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="03 - MATRICULA DE ALUNO ESPECIAL" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +115,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="04 - APROVEITAMENTO DE ESTUDOS" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="04 - APROVEITAMENTO DE ESTUDOS" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -113,7 +131,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="05 - BENEFÍCIOS DECRETO-LEI 1.044/69" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="05 - BENEFÍCIOS DECRETO-LEI 1.044/69" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -129,7 +147,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="06 - BENEFÍCIOS DECRETO-LEI 6.202/759" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="06 - BENEFÍCIOS DECRETO-LEI 6.202/759" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +162,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="07 - CANCELAMENTO DE MATRICULA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="07 - CANCELAMENTO DE MATRICULA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -159,7 +177,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="08 - DESISTÊNCIA DE DISCIPLINA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="08 - DESISTÊNCIA DE DISCIPLINA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -175,7 +193,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="09 - APRESSAMENTO DE DIPLOMA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="09 - APRESSAMENTO DE DIPLOMA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -191,7 +209,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="10 - EXAME DE PROFICIÊNCIA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="10 - EXAME DE PROFICIÊNCIA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -207,7 +225,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="11 - INSCRIÇÃO PARA VAGAS REMANESCENTES" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="11 - INSCRIÇÃO PARA VAGAS REMANESCENTES" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -224,7 +242,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="12 - MATRÍCULA EM DISCIPLINA DE OUTRO TURNO OU CURSO" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="12 - MATRÍCULA EM DISCIPLINA DE OUTRO TURNO OU CURSO" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -240,7 +258,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="13 - SEGUNDA CHAMADA DE PROVA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="13 - SEGUNDA CHAMADA DE PROVA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -256,7 +274,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="14 - TRANCAMENTO TOTAL DE MATRICULA" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="14 - TRANCAMENTO TOTAL DE MATRICULA" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -273,7 +291,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="15 - EQUIVALÊNCIA PARA O TRABALHO DE GRADUAÇÃO- TG" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="15 - EQUIVALÊNCIA PARA O TRABALHO DE GRADUAÇÃO- TG" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -288,7 +306,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="16 - REVISÃO DE NOTAS E FALTAS" disabled class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="16 - REVISÃO DE NOTAS E FALTAS" name="req" disabled class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>
@@ -303,7 +321,7 @@ include "./header.php";?>
                     </div>
                     <div class="row">   
                         <div class="col-4 offset-4">
-                            <button type="submit" name="17 - OUTROS TIPOS DE SOLICITAÇÃO" class="btn btn-primary rounded m-2">SOLICITAR</button>
+                            <button type="submit" value="17 - OUTROS TIPOS DE SOLICITAÇÃO" name="req" class="btn btn-primary rounded m-2">SOLICITAR</button>
                         </div>
                     </div>
                 </div>

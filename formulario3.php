@@ -1,23 +1,29 @@
 <?php 
     $titulo = "Descrição e Anexo";
+    include "./db/conexao.php";
+
+    if (isset($_POST["req"]) && !empty($_POST["req"]) ) {
+    
+    }else{
+        header("location:index.php");
+    }
+    
     include "./header.php";
-    if (isset($_FILES["anexo"]) && !empty($_FILES["anexo"]))
-    {
-        for($i = 0; $i < count($_FILES["anexo"]["name"]); $i++)
-        {
-            move_uploaded_file($_FILES["anexo"]["tmp_name"][$i], "./anexo/".$_FILES["anexo"]["name"][$i]);
-            //Salvar o file[$i] no banco com o Id da requisição
-        }
-        ?>
-        <div class="alert alert-success">
-            Anexo enviado com sucesso
-        </div>
-        <?php
-    } 
+    
 
-    ?>
+    
+?>
 
-<form action="./formulario3.php" method="post" enctype="multipart/form-data">
+<form action="./formulario4.php" method="post" enctype="multipart/form-data">
+
+<input type="hidden" name="nome" value="<?php echo $_POST["nome"];?>">
+<input type="hidden" name="ra" value="<?php echo $_POST["ra"];?>">
+<input type="hidden" name="curso" value="<?php echo $_POST["curso"];?>">
+<input type="hidden" name="turno" value="<?php echo $_POST["turno"];?>">
+<input type="hidden" name="email" value="<?php echo $_POST["email"];?>">
+<input type="hidden" name="telefone" value="<?php echo $_POST["telefone"];?>">
+<input type="hidden" name="req" value="<?php echo $_POST["req"];?>">
+
 
 <div class="col-6 container-fluid">
     <br><h1 class="h3 text-center">DESCREVA O MOTIVO DA SUA SOLICITAÇÃO</h1><br>
@@ -27,21 +33,20 @@
             <div class="col-md-12  bg-light border rounded">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-3">
+                        <div class="input-group mt-3 h5">
+                            <label>SOLICITAÇÃO: <?php echo $_POST["req"];?></label>
+                        </div>
+                    </div>
+                    <div class="row m-3">
                         <label class="m-2 h4">Descrição:</label>
                         <div class="form-floating">
-                            <textarea class="form-control" required placeholder="Descreva o motivo da sua solicitação." id="floatingTextarea2" style="height: 200px"></textarea>
-                            <label class="m-1" for="floatingTextarea2">Descreva o motivo da sua solicitação.</label>
+                            <textarea class="form-control" name="descricao" required placeholder="Descreva o motivo da sua solicitação." id="floatingTextarea2" style="height: 200px"></textarea>
+                            <label class="m-1" for="floatingTextarea2">Descreva o motivo da sua solicitação</label>
                         </div>
-                        <label class="h5 mt-3">ANEXO OBRIGATÓRIO</label>
-                        <input type="file" name="anexo[]" required multiple class="form-control">
-                    </div>
-                    <div class="row m-3 form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">NECESSITA DE VIA IMPRESSA</label>
                     </div>
                     <div class="row m-2">   
                         <div class="col-6 offset-7">
-                            <button type="submit" name="descricao" class="btn btn-primary rounded m-2">ENVIAR ANEXO</button>
+                            <button type="submit" class="btn btn-primary rounded m-2">PRÓXIMO</button>
                         </div>  
                     </div>
                 </div>
