@@ -43,16 +43,16 @@
         $descricao = $_POST["descricao"];
         $data = date("Y-m-d");  
         $adm = 1;
-        $protocolo = $ra . date("d") . date("m");
-        echo $protocolo;    
-        $anexo = $_FILES[$i];
+        $protocolo = date("Y") . date("d") . date("H") . date("m") . date("s");
+        $anexo = 1;
         $situacao = "ANDAMENTO";
         $query = "insert into aluno (nome, ra, curso, turno, email, telefone) values('$nome','$ra','$curso','$turno','$email','$telefone')";
         $resultado = mysqli_query($conexao,$query);
         $ultimoId = mysqli_insert_id($conexao);
         $query2 = "insert into solicitacao (id_aluno, id_administrativo, id_anexo, protocolo, situacao, requerimento, descricao, data_entrada) values ($ultimoId, '$adm', '$anexo', '$protocolo', '$situacao', '$req','$descricao','$data')";
         $resultado2 = mysqli_query($conexao,$query2);
-    
+
+        ?><br><br><div class="alert alert-danger text-center"> GUARDE SEU NÚMERO DE PROTOCOLO <?php echo $protocolo;?></div><?php
     }else{
         echo "Ocorreu um erro ao enviar sua solicitação!";
     }

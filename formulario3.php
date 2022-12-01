@@ -33,8 +33,8 @@
             <div class="col-md-12  bg-light border rounded">
                 <div class="d-flex flex-column justify-content-between">
                     <div class="row m-3">
-                        <div class="input-group mt-3 h5">
-                            <label>SOLICITAÇÃO: <?php echo $_POST["req"];?></label>
+                        <div class="input-group mt-3 h5 text-center">
+                            <label><?php echo $_POST["req"];?></label>
                         </div>
                     </div>
                     <div class="row m-3">
@@ -44,9 +44,10 @@
                             <label class="m-1" for="floatingTextarea2">Descreva o motivo da sua solicitação</label>
                         </div>
                     </div>
-                    <div class="row m-2">   
-                        <div class="col-6 offset-7">
-                            <button type="submit" class="btn btn-primary rounded m-2">PRÓXIMO</button>
+                    <div class="row m-3 d-flex justify-content-center">   
+                        <div class="col-6 offset-1">
+                            <a href="./index.php"><input type="button" value="Voltar" class="btn btn-secondary"></a>
+                            <button type="submit" class="btn btn-primary rounded">PRÓXIMO</button>
                         </div>  
                     </div>
                 </div>
