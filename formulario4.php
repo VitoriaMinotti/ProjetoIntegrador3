@@ -31,49 +31,49 @@
         <br><h1 class="h3 text-center">REVISE A SUA SOLICITAÇÃO</h1><br>
     </div>
     <div class="col-md-5 container-fluid bg-light border rounded">
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>NOME: <?php echo $_POST["nome"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>RA: <?php echo $_POST["ra"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>CURSO: <?php echo $_POST["curso"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>TURNO: <?php echo $_POST["turno"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>E-MAIL: <?php echo $_POST["email"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>TELEFONE: <?php echo $_POST["telefone"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>TIPO SOLICITAÇÃO: <?php echo $_POST["req"];?></label>
             </div>
         </div>
-        <div class="d-flex flex-row mb-3">
-            <div class="input-group mt-3">
+        <div class="d-flex flex-row mb-1">
+            <div class="input-group mt-4 mx-5">
                 <label>DESCRIÇÃO: <?php echo $_POST["descricao"];?></label>
             </div>
         </div>
 
         <div class="row m-3">
-                        <label class="h5 mt-3">ANEXO OBRIGATÓRIO</label>
+                        <label class="h5 mt-5">ANEXO OBRIGATÓRIO</label>
                         <input type="file" name="anexo[]" required multiple class="form-control">
                     </div>
         <button type="submit" class="form-control btn btn-success my-3">CONFIRMAR</button>

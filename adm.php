@@ -3,15 +3,33 @@
     include "protect.php";
     include "./db/conexao.php";
     include "./header.php";
-    // if (isset($_GET["busca"])&& !empty($_GET["busca"])) {
-    //     $protocolo = $_GET["busca"];
-    //     $query = file_get_contents("select * from solicitacao where protocolo = $protocolo");
-    //     $conexao = json_decode($query,true);
+    if (isset($_GET["busca"])&& !empty($_GET["busca"])) {
+        $pesquisa = $conexao->real_escape_string($_GET["busca"]);
+        $query = "select * from solicitacao where protocolo like '%$pesquisa%' or situacao like '%$pesquisa%'";
+
+        $resultado = mysqli_query($conexao,$pesquisa) or die("Erro ao pesquisar".$conexao->error);
+
+        if ($resultado->num_rows ==0) {
+            ?>
+            <td>Nenhum resultado encontrado!!</td>
+            <?php
+        }else{
+            while($dados = $resultado->fetch_assoc()){
+                ?>
+                    <tr>
+                        <td><?php echo $dados["protocolo"];?> </td>
+                        <td><?php echo $dados["nome"];?></td>
+                        <td><?php echo $dados["email"];?></td>
+                        <td><?php echo $dados["telefone"];?></td>
+                        <td><?php echo $dados["situacao"];?></td>
+                        <td><?php echo $dados["requerimento"];?></td>
+                        <td><?php echo $dados["data_entrada"];?></td>
+                    </tr>
+                    <?php
+            }
+        }
     
-    // }else{
-    //     $conexao = file_get_contents("select * from solicitacao");
-    //     $conexao = json_decode($conexao,true);
-    // }
+    }
 
 ?>
 
@@ -66,7 +84,7 @@
                 </thead>
                 <tbody>
                 <?php 
-                    $query = "select p.protocolo protocolo, p.id_solicitacao id_solicitacao, p.situacao situacao, p.requerimento requerimento, p.data_entrada data_entrada, a.nome nome, a.email email, a.telefone telefone from solicitacao p inner join aluno a on (p.id_solicitacao = a.id_aluno)";
+                    $query = "select p.protocolo protocolo, p.id_solicitacao id_solicitacao, p.situacao situacao, p.requerimento requerimento, p.data_entrada data_entrada, a.nome nome, a.email email, a.telefone telefone from solicitacao p inner join aluno a on (p.id_aluno = a.id_aluno)";
                     $dados = mysqli_query($conexao,$query);
 
                     if($dados)
@@ -81,7 +99,7 @@
                                     <td><?php echo $linha["situacao"];?></td>
                                     <td><?php echo $linha["requerimento"];?></td>
                                     <td><?php echo $linha["data_entrada"];?></td>
-                                    <td><a class="btn btn-warning" href="./completo.php">VISUALIZAR</a></td>
+                                    <td><a class="btn btn-warning" href="./completo.php?id_aluno=<?php $dados?>">VISUALIZAR</a></td>
                                 </tr>
 
                         <?php

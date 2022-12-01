@@ -11,7 +11,7 @@ include "./db/conexao.php";
 
 <form action="" method="post" enctype="multipart/form-data">
     <?php
-        $query = "select p.protocolo protocolo, p.situacao situacao, p.requerimento requerimento, p.descricao descricao, d.anexo anexo, p.data_entrada data_entrada, a.nome nome, a.ra ra, a.email email, a.telefone telefone, a.curso curso, a.turno turno from solicitacao p inner join aluno a inner join anexo d on (p.id_solicitacao = a.id_aluno = d.id_anexo)";
+        $query = "select p.protocolo protocolo, p.situacao situacao, p.requerimento requerimento, p.descricao descricao, d.anexo anexo, p.data_entrada data_entrada, a.nome nome, a.ra ra, a.email email, a.telefone telefone, a.curso curso, a.turno turno from solicitacao p inner join aluno a inner join anexo d on (p.id_aluno = a.id_aluno = d.id_anexo)";
         $dados = mysqli_query($conexao,$query);
 
         $linha = mysqli_fetch_assoc($dados);
